@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="TabBarItemView" customModule="Custom_TabBar_Template" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sQ-G7-RGw" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3C6-gu-uRH">
+                            <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ne1-gk-Po8">
+                                    <rect key="frame" x="15" y="2" width="30" height="16.5"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="APU-jw-BAG"/>
+                                        <constraint firstAttribute="width" constant="30" id="QfW-uk-MvB"/>
+                                    </constraints>
+                                    <imageReference key="image" image="gearshape" catalog="system" symbolScale="small"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm7-kX-0mc">
+                                    <rect key="frame" x="50" y="0.0" width="65" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="TabBarColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="ubt-0U-dpw"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="15" bottom="0.0" right="15"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="TabBarColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3C6-gu-uRH" secondAttribute="trailing" id="675-du-hu3"/>
+                        <constraint firstItem="3C6-gu-uRH" firstAttribute="top" secondItem="2sQ-G7-RGw" secondAttribute="top" id="XmB-WE-8iU"/>
+                        <constraint firstItem="3C6-gu-uRH" firstAttribute="leading" secondItem="2sQ-G7-RGw" secondAttribute="leading" id="a6y-LB-Keu"/>
+                        <constraint firstAttribute="bottom" secondItem="3C6-gu-uRH" secondAttribute="bottom" id="vhw-CC-M0a"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="yg6-l5-PYb"/>
+            <color key="backgroundColor" name="TabBarColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2sQ-G7-RGw" secondAttribute="trailing" id="4Me-Io-rPw"/>
+                <constraint firstItem="2sQ-G7-RGw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rqk-6P-9gf"/>
+                <constraint firstAttribute="bottom" secondItem="2sQ-G7-RGw" secondAttribute="bottom" id="ybG-9O-K3S"/>
+                <constraint firstItem="2sQ-G7-RGw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zSo-Yd-Dnx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="2sQ-G7-RGw" id="xMQ-Am-Tt0"/>
+                <outlet property="imageHeight" destination="APU-jw-BAG" id="57p-Cd-6Si"/>
+                <outlet property="imageWidth" destination="QfW-uk-MvB" id="akx-qL-YJu"/>
+                <outlet property="imgView" destination="ne1-gk-Po8" id="1IG-Nz-GSA"/>
+                <outlet property="stackView" destination="3C6-gu-uRH" id="XU8-LH-oA6"/>
+                <outlet property="titleLabel" destination="Zm7-kX-0mc" id="ut0-RF-vGy"/>
+            </connections>
+            <point key="canvasLocation" x="-496" y="166"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <namedColor name="TabBarColor">
+            <color red="0.14300000667572021" green="0.14300000667572021" blue="0.16599999368190765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
